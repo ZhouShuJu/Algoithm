@@ -1,7 +1,12 @@
 package com.zsj.sort;
 
+/**
+ * 排序接口类
+ * @author ZhouShuJu
+ * @date   2017年11月15日 22:27:53
+ */
 public interface SortDao {
 
-	public int[] sort(int [] arr);
+	public void sort(int [] arr);
 	
 }
