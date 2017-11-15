@@ -26,6 +26,16 @@ public class SortUtil {
 		return arr;
 	}
 	
-	
+	/**
+	 * 用来交换arr数组中索引为index1和index2的位置的值
+	 * @param arr
+	 * @param index1
+	 * @param index2
+	 */
+	public static void swap(int [] arr, int index1, int index2) {
+		arr [index1] ^= arr [index2];
+		arr [index2] ^= arr [index1];
+		arr [index1] ^= arr [index2];
+	}
 	
 }
