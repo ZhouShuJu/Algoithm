@@ -71,4 +71,14 @@ public class SortUtil {
 		return arr;
 	}
 
+	/**
+	 * 遍历数组arr打印到控制台
+	 * @param arr
+	 */
+	public static void printArr(int [] arr) {
+		for (int i : arr) {
+			System.out.print(i + ",");
+		}
+	}
+	
 }
