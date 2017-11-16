@@ -16,11 +16,13 @@ public class SortTest {
 		//生成数组
 		int n = 100000;
 		int [] arr = SortUtil.generateRandomArray(n, 0, n);
+		int [] almostSortedArr = SortUtil.generateAlmostSortedArr(n, 10);
 		
 	    //创建排序类
 		SortDao selectionSort = new SelectionSort();
 		
 		SortUtil.sortTest("SelectionSort", selectionSort, arr);
+		SortUtil.sortTest("SelectionSort", selectionSort, almostSortedArr);
 		/*
 		//排序
 		selectionSort.sort(arr);
