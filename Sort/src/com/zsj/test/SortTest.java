@@ -14,19 +14,21 @@ public class SortTest {
 	public static void main(String[] args) {
 		
 		//生成数组
-		int n = 1000;
+		int n = 100000;
 		int [] arr = SortUtil.generateRandomArray(n, 0, n);
 		
 	    //创建排序类
 		SortDao selectionSort = new SelectionSort();
 		
+		SortUtil.sortTest("SelectionSort", selectionSort, arr);
+		/*
 		//排序
 		selectionSort.sort(arr);
 		
 		//打印
 		if (SortUtil.isSorted(arr)) {
 			SortUtil.printArr(arr);
-		}
+		}*/
 		
 	}
 	
