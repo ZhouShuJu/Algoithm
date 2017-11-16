@@ -56,7 +56,13 @@ public class SortUtil {
 	
 	public static int[] generateAlmostSortedArr(int n, int m) {
 		int [] arr = new arr[n];
-			
+		for (int i = 0; i < n; i++) {
+			arr [i] = i;
+		}
+		for (int j = 0; j < m; j++) {
+			int index = (int)(Math.random() * n);
+			swap (arr,index,index+1)；
+		}
 		return arr;
 	}
 
