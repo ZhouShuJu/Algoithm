@@ -1,5 +1,7 @@
 package com.zsj.util;
 
+import com.sun.org.apache.xalan.internal.xsltc.dom.ArrayNodeListIterator;
+
 /**
  * 排序工具类
  * @author ZhouShuJu
@@ -52,4 +54,10 @@ public class SortUtil {
 		return true;
 	}
 	
+	public static int[] generateAlmostSortedArr(int n, int m) {
+		int [] arr = new arr[n];
+			
+		return arr;
+	}
+
 }
