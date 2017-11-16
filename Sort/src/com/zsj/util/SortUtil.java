@@ -1,5 +1,7 @@
 package com.zsj.util;
 
+import com.zsj.sort.SortDao;
+
 /**
  * 排序工具类
  * @author ZhouShuJu
@@ -79,6 +81,19 @@ public class SortUtil {
 		for (int i : arr) {
 			System.out.print(i + ",");
 		}
+	}
+	
+	/**
+	 * 测试sort排序方法对arr排序要花费的时间
+	 * @param sortName
+	 * @param sort
+	 * @param arr
+	 */
+	public static void sortTest(String sortName, SortDao sort, int [] arr) {
+		long startTime = System.currentTimeMillis();
+		sort.sort(arr);
+		long endTime = System.currentTimeMillis();
+		System.out.println(sortName + " : " + (endTime - startTime) + "ms");
 	}
 	
 }
