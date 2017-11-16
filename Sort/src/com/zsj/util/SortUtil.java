@@ -1,7 +1,5 @@
 package com.zsj.util;
 
-import com.sun.org.apache.xalan.internal.xsltc.dom.ArrayNodeListIterator;
-
 /**
  * 排序工具类
  * @author ZhouShuJu
@@ -54,14 +52,21 @@ public class SortUtil {
 		return true;
 	}
 	
+	/**
+	 * 生成一个有n个元素的有序的数组，然后随机交换m对元素，生成一个近乎有序的数组
+	 * @param n
+	 * @param m
+	 * @return
+	 */
 	public static int[] generateAlmostSortedArr(int n, int m) {
-		int [] arr = new arr[n];
+		int [] arr = new int[n];
 		for (int i = 0; i < n; i++) {
 			arr [i] = i;
 		}
 		for (int j = 0; j < m; j++) {
-			int index = (int)(Math.random() * n);
-			swap (arr,index,index+1)；
+			int index1 = (int)(Math.random() * n + 1);
+			int index2 = (int)(Math.random() * n + 1);
+			swap (arr,index1,index2);
 		}
 		return arr;
 	}
