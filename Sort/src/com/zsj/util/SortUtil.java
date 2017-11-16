@@ -66,8 +66,8 @@ public class SortUtil {
 			arr [i] = i;
 		}
 		for (int j = 0; j < m; j++) {
-			int index1 = (int)(Math.random() * n + 1);
-			int index2 = (int)(Math.random() * n + 1);
+			int index1 = (int)(Math.random() * (n + 1));
+			int index2 = (int)(Math.random() * (n + 1));
 			swap (arr,index1,index2);
 		}
 		return arr;
@@ -93,7 +93,11 @@ public class SortUtil {
 		long startTime = System.currentTimeMillis();
 		sort.sort(arr);
 		long endTime = System.currentTimeMillis();
-		System.out.println(sortName + " : " + (endTime - startTime) + "ms");
+		if (isSorted(arr)) {
+			System.out.println(sortName + " : " + (endTime - startTime) + "ms");
+		} else {
+			throw new RuntimeException("Sorting failure");
+		}
 	}
 	
 }
