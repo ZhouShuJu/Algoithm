@@ -31,13 +31,15 @@ public class SortTest {
 		SortDao insertionSort = new InsertionSort();
 		SortDao insertionSort2 = new InsertionSort2();
 
-
+		System.out.println("* 对普通的数组排序：");
 		SortUtil.sortTest("SelectionSort", selectionSort, arr);
-		SortUtil.sortTest("SelectionSort-a", selectionSort, almostSortedArr);
 		SortUtil.sortTest("InsertionSort", insertionSort, arrCopy);
-		SortUtil.sortTest("InsertionSort-a", insertionSort, almostSortedArrCopy);
 		SortUtil.sortTest("InsertionSort2", insertionSort2, arrCopy2);
-		SortUtil.sortTest("InsertionSort2-a", insertionSort2, almostSortedArrCopy2);
+		
+		System.out.println("\n* 对近乎有序的数组排序：");
+		SortUtil.sortTest("SelectionSort", selectionSort, almostSortedArr);
+		SortUtil.sortTest("InsertionSort", insertionSort, almostSortedArrCopy);
+		SortUtil.sortTest("InsertionSort2", insertionSort2, almostSortedArrCopy2);
 
 
 		/*

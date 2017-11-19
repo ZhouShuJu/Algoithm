@@ -12,9 +12,11 @@ public class InsertionSort2 implements SortDao{
     public void sort(int [] arr) {    
         for (int i = 0; i < arr.length; i++) {
             int temp = arr[i];
-            for (int j = i; j > 0 && arr[j - 1] > temp; j--) {
+            int j;
+            for (j = i; j > 0 && arr[j - 1] > temp; j--) {
                 arr[j] = arr[j - 1];
             }
+            arr[j] = temp;
         }
     }
 
