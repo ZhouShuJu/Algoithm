@@ -56,14 +56,6 @@ public class SortTest {
 //		SortUtil.sortTest("InsertionSort2", insertionSort2, almostSortedArrCopy2);
 //		SortUtil.sortTest("MergeSort", mergeSort, almostSortedArrCopy3);
 
-		/*
-		//排序
-		selectionSort.sort(arr);
-		
-		//打印
-		if (SortUtil.isSorted(arr)) {
-			SortUtil.printArr(arr);
-		}*/
 		
 	}
 	
