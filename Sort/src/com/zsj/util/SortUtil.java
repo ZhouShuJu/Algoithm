@@ -94,7 +94,7 @@ public class SortUtil {
 		sort.sort(arr);
 		long endTime = System.currentTimeMillis();
 		if (isSorted(arr)) {
-			System.out.println(sortName + " : " + (endTime - startTime) + "ms");
+			System.out.println(sortName + " 对 " + arr.length + " 个元素的数组排序用时 " + " : " + (endTime - startTime) + "ms");
 		} else {
 			throw new RuntimeException("Sorting failure");
 		}
