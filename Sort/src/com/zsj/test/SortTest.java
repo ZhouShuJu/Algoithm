@@ -20,13 +20,12 @@ public class SortTest {
 	public static void main(String[] args) {
 		
 		//生成数组
-		int n = 100000;
+		int n = 1000;
 		int [] arr = SortUtil.generateRandomArray(n, 0, n);
 		int [] arrCopy = Arrays.copyOf(arr, n);
 		int [] arrCopy2 = Arrays.copyOf(arr, n);
 		int [] arrCopy3 = Arrays.copyOf(arr, n);
 		int [] arrCopy4 = Arrays.copyOf(arr, n);
-		
 		
 		int [] almostSortedArr = SortUtil.generateAlmostSortedArr(n, 10);
 		int [] almostSortedArrCopy = Arrays.copyOf(almostSortedArr, n);
@@ -34,6 +33,8 @@ public class SortTest {
 		int [] almostSortedArrCopy3 = Arrays.copyOf(almostSortedArr, n);
 		int [] almostSortedArrCopy4 = Arrays.copyOf(almostSortedArr, n);
 		
+//		SortUtil.printArr(arr);
+//		SortUtil.printArr(almostSortedArr);
 		
 	    //创建排序类
 		SortDao selectionSort = new SelectionSort();
@@ -45,16 +46,31 @@ public class SortTest {
 		System.out.println("* 对 " + n + " 个元素的普通数组进行排序：");
 		SortUtil.sortTest("BubbleSort", bubbleSort, arrCopy4);
 		SortUtil.sortTest("SelectionSort", selectionSort, arr);
-//		SortUtil.sortTest("InsertionSort", insertionSort, arrCopy);
-//		SortUtil.sortTest("InsertionSort2", insertionSort2, arrCopy2);
-//		SortUtil.sortTest("MergeSort", mergeSort, arrCopy3);
+		SortUtil.sortTest("InsertionSort", insertionSort, arrCopy);
+		SortUtil.sortTest("InsertionSort2", insertionSort2, arrCopy2);
+		SortUtil.sortTest("MergeSort", mergeSort, arrCopy3);
+		
+	    /*	
+		SortUtil.printArr(arrCopy4);
+		SortUtil.printArr(arr);
+		SortUtil.printArr(arrCopy);
+		SortUtil.printArr(arrCopy2);
+		SortUtil.printArr(arrCopy3);*/
+		
 		
 		System.out.println("\n* 对" + n + " 个元素的近乎有序的数组排序：");
 		SortUtil.sortTest("bubbleSort", bubbleSort, almostSortedArrCopy4);
 		SortUtil.sortTest("SelectionSort", selectionSort, almostSortedArr);
-//		SortUtil.sortTest("InsertionSort", insertionSort, almostSortedArrCopy);
-//		SortUtil.sortTest("InsertionSort2", insertionSort2, almostSortedArrCopy2);
-//		SortUtil.sortTest("MergeSort", mergeSort, almostSortedArrCopy3);
+		SortUtil.sortTest("InsertionSort", insertionSort, almostSortedArrCopy);
+		SortUtil.sortTest("InsertionSort2", insertionSort2, almostSortedArrCopy2);
+		SortUtil.sortTest("MergeSort", mergeSort, almostSortedArrCopy3);
+		
+	    /*	
+		SortUtil.printArr(almostSortedArrCopy4);
+		SortUtil.printArr(almostSortedArr);
+		SortUtil.printArr(almostSortedArrCopy);
+		SortUtil.printArr(almostSortedArrCopy2);
+		SortUtil.printArr(almostSortedArrCopy3);*/
 
 		
 	}
