@@ -1,4 +1,7 @@
 package com.zsj.sort;
+
+import java.util.Arrays;
+
 /**
  * 归并排序法
  * @Author ZhouShuJu
@@ -22,20 +25,25 @@ public class MergeSort implements SortDao {
 	}
 
 	private void merge(int[] arr, int l, int r) {
-		int [] temp = arr;
+		int [] temp = new int[r - l + 1];
+		for (int i = l; i <= r; i++) {
+			temp[i - l] = arr[i]; 
+		}
 		int mid = (l + r) / 2;
 		int i = l, j = mid + 1;
 		for (int k = l; k <= r; k++) {
-			if (l > mid) {
-				arr[k] = temp[j];
+			if (i > mid) {
+				arr[k] = temp[j - l];
+				j ++;
 			} else if (j > r) {
-				arr[k] = temp[l];
-			} else if (temp[l] < temp[j]) {
-				arr[k] = temp[l];
-				l++;
+				arr[k] = temp[i - l];
+				i ++;
+			} else if (temp[i - l] < temp[j - l]) {
+				arr[k] = temp[i - l];
+				i ++;
 			} else {
-				arr[k] = temp[j];
-				j++;
+				arr[k] = temp[j - l];
+				j ++;
 			}
 		}
 	}
