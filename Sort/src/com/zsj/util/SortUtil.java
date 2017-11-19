@@ -66,8 +66,8 @@ public class SortUtil {
 			arr [i] = i;
 		}
 		for (int j = 0; j < m; j++) {
-			int index1 = (int)(Math.random() * (n + 1));
-			int index2 = (int)(Math.random() * (n + 1));
+			int index1 = (int)(Math.random() * n);
+			int index2 = (int)(Math.random() * n);
 			swap (arr,index1,index2);
 		}
 		return arr;
@@ -81,6 +81,7 @@ public class SortUtil {
 		for (int i : arr) {
 			System.out.print(i + ",");
 		}
+		System.out.println();
 	}
 	
 	/**
