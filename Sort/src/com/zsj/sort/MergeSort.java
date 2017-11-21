@@ -45,5 +45,28 @@ public class MergeSort implements SortDao {
 			}
 		}
 	}
+	
+	/**
+	 * 写个内部类对MergeSort进行一个简单的改进
+	 * @author ZhouShuJu
+	 * 
+	 */
+	class MergeSort2 implements SortDao {
+		public void sort(int arr[]) {
+			mergeSort2(arr, 0, arr.length-1);
+		}
+		
+		private void mergeSort2(int [] arr, int l, int r) {
+			if (l > r) {
+				return;
+			}
+			int mid = (r - l + 1) / 2;
+			mergeSort2(arr, l, mid);
+			mergeSort2(arr, mid + 1, r);
+			if (arr[mid] > arr[mid + 1]){
+				merge(arr, l, r);
+			}
+		}
+	}
 
 }
